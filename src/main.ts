@@ -108,6 +108,7 @@ async function deployApp(): Promise<void> {
   }
 
   const app = core.getInput('app')
+  const svc = core.getInput('svc')
   const env = core.getInput('env')
   const path = core.getInput('path') || '.'
 
@@ -117,6 +118,10 @@ async function deployApp(): Promise<void> {
     throw new Error('App name is required')
   }
 
+  if (!svc) {
+    throw new Error('Service is required')
+  }
+  
   if (!env) {
     throw new Error('Environment is required')
   }
@@ -125,6 +130,8 @@ async function deployApp(): Promise<void> {
     'deploy',
     '--app',
     app,
+    '--name',
+    svc,
     '--env',
     env,
     force ? '--force' : ''
