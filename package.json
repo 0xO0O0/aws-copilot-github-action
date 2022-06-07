@@ -1,6 +1,6 @@
 {
   "name": "aws-copilot-github-action",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "private": true,
   "description": "AWS Copilot Github Action",
   "main": "lib/main.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ksivamuthu/aws-copilot-github-actions.git"
+    "url": "git+https://github.com/0xO0O0/aws-copilot-github-actions.git"
   },
   "keywords": [
     "actions",
